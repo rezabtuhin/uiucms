@@ -145,8 +145,8 @@
         <div class="container justify-content-between">
             <div class="d-flex">
                 <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="20"
-                        alt="MDB Logo" loading="lazy" style="margin-top: 2px;" />
+                <img src="uiu.jpg" height="30"
+                        alt="logo" loading="lazy" style="margin-top: 2px; border-radius:50%;" />
                 </a>
 
                 <form class="input-group w-auto my-auto d-none d-sm-flex" action="search-result.php" method="POST">
