@@ -81,7 +81,7 @@
                                     $post_text = $row['post_text'];
                                     $total_reaction = $row['total_reaction'];
                                     $time = $row['time'];
-                                    $dept = $row['dept'];                      
+                                                         
  
                                 }
                                 

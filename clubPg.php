@@ -224,7 +224,7 @@
 														<div class="usy-name">
 															<h3>UIU Robotics</h3>
 															<span><img src="./image_files/clock.png"
-																	alt="">3 min ago</span>
+																	alt="">  <?php echo $time ?> min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -246,7 +246,9 @@
 													</div>
 												</div>
 												<div class="epi-sec">
-													<p><?php echo New Member Recruitment Coming Soon!?><a
+													<p> 
+                                                        <?php echo $post_text ?>
+                                                         <a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
 															title="">view more</a></p>
 												</div>
@@ -258,7 +260,10 @@
 																	class="fas fa-heart"></i> Like</a>
 															<img src="./image_files/liked-img.png"
 																alt="">
-															<span>25</span>
+															<span>
+													            <?php echo $post_raection ?>
+
+                                                            </span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
 																class="com"><i class="fas fa-comment-alt"></i> Comments
