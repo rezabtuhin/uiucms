@@ -246,9 +246,7 @@
 													</div>
 												</div>
 												<div class="epi-sec">
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
-														magna sit amet... <a
+													<p><?php echo New Member Recruitment Coming Soon!?><a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
 															title="">view more</a></p>
 												</div>
