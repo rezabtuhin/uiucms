@@ -161,7 +161,7 @@ $num = mysqli_num_rows($connect);
 																<h3>011191156</h3>
 
 
-																<span><img src="./WorkWise Html Template_files/clock.png" alt="">3 min ago</span>
+																<span><img src="./WorkWise Html Template_files/clock.png" alt="">10 min ago</span>
 															</div>
 														</div>
 														<div class="ed-opts">
