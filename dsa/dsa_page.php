@@ -260,75 +260,7 @@ $num = mysqli_num_rows($connect);
 												<p> Menlo Park, California, United States</p>
 											</div>
 										</div>
-										<div class="product-feed-tab" id="portfolio-dd">
-											<div class="portfolio-gallery-sec">
-												<h3>Portfolio</h3>
-												<div class="gallery_pf">
-													<div class="row">
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img1.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img2.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img3.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img4.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img5.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img6.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img7.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img8.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img9.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-														<div class="col-lg-4 col-md-4 col-sm-4 col-6">
-															<div class="gallery_pt">
-																<img src="./WorkWise Html Template_files/pf-img10.jpg" alt="">
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><img src="./WorkWise Html Template_files/all-out.png" alt=""></a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+										
 									</div>
 								</div>
 
@@ -509,10 +441,6 @@ $num = mysqli_num_rows($connect);
 						Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
 					</span>
 				</div>
-				<div class="flatpickr-days" tabindex="-1">
-					<div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="July 31, 2022" tabindex="-1">31</span><span class="flatpickr-day " aria-label="August 1, 2022" tabindex="-1">1</span><span class="flatpickr-day " aria-label="August 2, 2022" tabindex="-1">2</span><span class="flatpickr-day " aria-label="August 3, 2022" tabindex="-1">3</span><span class="flatpickr-day " aria-label="August 4, 2022" tabindex="-1">4</span><span class="flatpickr-day " aria-label="August 5, 2022" tabindex="-1">5</span><span class="flatpickr-day " aria-label="August 6, 2022" tabindex="-1">6</span><span class="flatpickr-day " aria-label="August 7, 2022" tabindex="-1">7</span><span class="flatpickr-day " aria-label="August 8, 2022" tabindex="-1">8</span><span class="flatpickr-day " aria-label="August 9, 2022" tabindex="-1">9</span><span class="flatpickr-day " aria-label="August 10, 2022" tabindex="-1">10</span><span class="flatpickr-day today" aria-label="August 11, 2022" tabindex="-1">11</span><span class="flatpickr-day " aria-label="August 12, 2022" tabindex="-1">12</span><span class="flatpickr-day " aria-label="August 13, 2022" tabindex="-1">13</span><span class="flatpickr-day " aria-label="August 14, 2022" tabindex="-1">14</span><span class="flatpickr-day " aria-label="August 15, 2022" tabindex="-1">15</span><span class="flatpickr-day " aria-label="August 16, 2022" tabindex="-1">16</span><span class="flatpickr-day " aria-label="August 17, 2022" tabindex="-1">17</span><span class="flatpickr-day " aria-label="August 18, 2022" tabindex="-1">18</span><span class="flatpickr-day " aria-label="August 19, 2022" tabindex="-1">19</span><span class="flatpickr-day " aria-label="August 20, 2022" tabindex="-1">20</span><span class="flatpickr-day " aria-label="August 21, 2022" tabindex="-1">21</span><span class="flatpickr-day " aria-label="August 22, 2022" tabindex="-1">22</span><span class="flatpickr-day " aria-label="August 23, 2022" tabindex="-1">23</span><span class="flatpickr-day " aria-label="August 24, 2022" tabindex="-1">24</span><span class="flatpickr-day " aria-label="August 25, 2022" tabindex="-1">25</span><span class="flatpickr-day " aria-label="August 26, 2022" tabindex="-1">26</span><span class="flatpickr-day " aria-label="August 27, 2022" tabindex="-1">27</span><span class="flatpickr-day " aria-label="August 28, 2022" tabindex="-1">28</span><span class="flatpickr-day " aria-label="August 29, 2022" tabindex="-1">29</span><span class="flatpickr-day " aria-label="August 30, 2022" tabindex="-1">30</span><span class="flatpickr-day " aria-label="August 31, 2022" tabindex="-1">31</span><span class="flatpickr-day nextMonthDay" aria-label="September 1, 2022" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="September 2, 2022" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="September 3, 2022" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="September 4, 2022" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="September 5, 2022" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="September 6, 2022" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="September 7, 2022" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="September 8, 2022" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="September 9, 2022" tabindex="-1">9</span><span class="flatpickr-day nextMonthDay" aria-label="September 10, 2022" tabindex="-1">10</span>
-					</div>
-				</div>
 			</div>
 		</div>
 		<div class="flatpickr-time" tabindex="-1">
@@ -539,10 +467,7 @@ $num = mysqli_num_rows($connect);
 						Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
 					</span>
 				</div>
-				<div class="flatpickr-days" tabindex="-1">
-					<div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="July 31, 2022" tabindex="-1">31</span><span class="flatpickr-day " aria-label="August 1, 2022" tabindex="-1">1</span><span class="flatpickr-day " aria-label="August 2, 2022" tabindex="-1">2</span><span class="flatpickr-day " aria-label="August 3, 2022" tabindex="-1">3</span><span class="flatpickr-day " aria-label="August 4, 2022" tabindex="-1">4</span><span class="flatpickr-day " aria-label="August 5, 2022" tabindex="-1">5</span><span class="flatpickr-day " aria-label="August 6, 2022" tabindex="-1">6</span><span class="flatpickr-day " aria-label="August 7, 2022" tabindex="-1">7</span><span class="flatpickr-day " aria-label="August 8, 2022" tabindex="-1">8</span><span class="flatpickr-day " aria-label="August 9, 2022" tabindex="-1">9</span><span class="flatpickr-day " aria-label="August 10, 2022" tabindex="-1">10</span><span class="flatpickr-day today" aria-label="August 11, 2022" tabindex="-1">11</span><span class="flatpickr-day " aria-label="August 12, 2022" tabindex="-1">12</span><span class="flatpickr-day " aria-label="August 13, 2022" tabindex="-1">13</span><span class="flatpickr-day " aria-label="August 14, 2022" tabindex="-1">14</span><span class="flatpickr-day " aria-label="August 15, 2022" tabindex="-1">15</span><span class="flatpickr-day " aria-label="August 16, 2022" tabindex="-1">16</span><span class="flatpickr-day " aria-label="August 17, 2022" tabindex="-1">17</span><span class="flatpickr-day " aria-label="August 18, 2022" tabindex="-1">18</span><span class="flatpickr-day " aria-label="August 19, 2022" tabindex="-1">19</span><span class="flatpickr-day " aria-label="August 20, 2022" tabindex="-1">20</span><span class="flatpickr-day " aria-label="August 21, 2022" tabindex="-1">21</span><span class="flatpickr-day " aria-label="August 22, 2022" tabindex="-1">22</span><span class="flatpickr-day " aria-label="August 23, 2022" tabindex="-1">23</span><span class="flatpickr-day " aria-label="August 24, 2022" tabindex="-1">24</span><span class="flatpickr-day " aria-label="August 25, 2022" tabindex="-1">25</span><span class="flatpickr-day " aria-label="August 26, 2022" tabindex="-1">26</span><span class="flatpickr-day " aria-label="August 27, 2022" tabindex="-1">27</span><span class="flatpickr-day " aria-label="August 28, 2022" tabindex="-1">28</span><span class="flatpickr-day " aria-label="August 29, 2022" tabindex="-1">29</span><span class="flatpickr-day " aria-label="August 30, 2022" tabindex="-1">30</span><span class="flatpickr-day " aria-label="August 31, 2022" tabindex="-1">31</span><span class="flatpickr-day nextMonthDay" aria-label="September 1, 2022" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="September 2, 2022" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="September 3, 2022" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="September 4, 2022" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="September 5, 2022" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="September 6, 2022" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="September 7, 2022" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="September 8, 2022" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="September 9, 2022" tabindex="-1">9</span><span class="flatpickr-day nextMonthDay" aria-label="September 10, 2022" tabindex="-1">10</span>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 		<div class="flatpickr-time" tabindex="-1">
