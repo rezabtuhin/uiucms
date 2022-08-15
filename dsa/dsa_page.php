@@ -159,6 +159,7 @@ $num = mysqli_num_rows($connect);
 																}
 
 																?>
+																<h3>011191156</h3>
 
 
 																<span><img src="./WorkWise Html Template_files/clock.png" alt="">3 min ago</span>
@@ -183,10 +184,18 @@ $num = mysqli_num_rows($connect);
 														</ul>
 													</div>
 													<div class="job_descp">
+													<?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "
+							<strong> " . $data["user"] . "</strong>
+							";
+																	}
+																}
 
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-															luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
-															magna sit amet...</p>
+																?>
+
+														<p>Hello, this is my new post.</p>
 
 													</div>
 													<div class="job-status-bar">
@@ -194,6 +203,16 @@ $num = mysqli_num_rows($connect);
 															<li>
 																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" class="active"><i class="fas fa-heart"></i> Like</a>
 																<img src="./WorkWise Html Template_files/liked-img.png" alt="">
+																<?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "
+																		<span>".$data["total_reaction"]."</span>
+							";
+																	}
+																}
+
+																?>
 																<span>25</span>
 															</li>
 															<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" class="com"><i class="fas fa-comment-alt"></i> Comments
