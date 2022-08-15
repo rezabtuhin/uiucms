@@ -308,7 +308,20 @@
                     }
                 });
             });
-            
+            setInterval(function(){
+                $.ajax({
+                    url: "realtimeUpdate.php",
+                    method: "POST",
+                    data:{
+                        fromUser: $("#fromUser").val(),
+                        toUser: $("#toUser").val()
+                    },
+                    dataType:"text",
+                    success:function(data){
+                        $("#message-area").html(data);
+                    }
+                });
+            }, 700);
         });
     </script>
 </body>
