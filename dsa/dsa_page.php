@@ -125,9 +125,9 @@ $num = mysqli_num_rows($connect);
 										<ul class="social_links">
 											<li><a href="#" title=""><i class="la la-globe"></i> www.example.com</a></li>
 											<li><a href="#" title=""><i class="fa fa-facebook-square"></i>
-													Http://www.facebook.com/john...</a></li>
+													Http://www.facebook.com/john</a></li>
 											<li><a href="#" title=""><i class="fa fa-twitter"></i>
-													Http://www.Twitter.com/john...</a></li>
+													Http://www.Twitter.com/john</a></li>
 
 										</ul>
 									</div>
@@ -215,7 +215,7 @@ $num = mysqli_num_rows($connect);
 																<span>25</span>
 															</li>
 															<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comments
-																	15</a></li>
+																	10</a></li>
 														</ul>
 														<a href="#"><i class="fas fa-eye"></i>Views 50</a>
 													</div>
@@ -230,11 +230,10 @@ $num = mysqli_num_rows($connect);
 												</div>
 											</div>
 										</div>
-										<div class="product-feed-tab" id="info-dd">
+										<!-- <div class="product-feed-tab" id="info-dd">
 											<div class="user-profile-ov">
 												<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor
-													aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue
 													</p>
 											</div>
 											<div class="user-profile-ov st2">
@@ -252,7 +251,7 @@ $num = mysqli_num_rows($connect);
 												<h4>USA</h4>
 												<p> Menlo Park, California, United States</p>
 											</div>
-										</div>
+										</div> -->
 										
 									</div>
 								</div>
