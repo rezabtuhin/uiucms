@@ -1,15 +1,9 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "uiucms");
-// if ($conn) {
-// 	echo "succ";
-// } else {
-// 	echo "not";
-// }
 $query = "select * from post";
 $connect = mysqli_query($conn, $query);
 // $data = mysqli_fetch_assoc($connect);
 $num = mysqli_num_rows($connect);
-// echo $num;
 ?>
 <!DOCTYPE html>
 <html>
@@ -95,7 +89,7 @@ $num = mysqli_num_rows($connect);
 						if ($num > 0) {
 							while ($data = mysqli_fetch_assoc($connect)) {
 								echo "
-							<strong> " .$data["user"]. "</strong>
+							<strong> " . $data["user"] . "</strong>
 							";
 							}
 						}
@@ -159,13 +153,13 @@ $num = mysqli_num_rows($connect);
 																if ($num > 0) {
 																	while ($data = mysqli_fetch_assoc($connect)) {
 																		echo "
-							
+							<strong> " . $data["user"] . "</strong>
 							";
 																	}
 																}
 
 																?>
-																<h3>" .$data["post_id"]. "</h3>
+
 
 																<span><img src="./WorkWise Html Template_files/clock.png" alt="">3 min ago</span>
 															</div>
