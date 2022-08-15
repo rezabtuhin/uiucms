@@ -123,10 +123,10 @@ $num = mysqli_num_rows($connect);
 										</div>
 
 										<ul class="social_links">
-											<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><i class="la la-globe"></i> www.example.com</a></li>
-											<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><i class="fa fa-facebook-square"></i>
+											<li><a href="#" title=""><i class="la la-globe"></i> www.example.com</a></li>
+											<li><a href="#" title=""><i class="fa fa-facebook-square"></i>
 													Http://www.facebook.com/john...</a></li>
-											<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><i class="fa fa-twitter"></i>
+											<li><a href="#" title=""><i class="fa fa-twitter"></i>
 													Http://www.Twitter.com/john...</a></li>
 
 										</ul>
@@ -165,21 +165,21 @@ $num = mysqli_num_rows($connect);
 															</div>
 														</div>
 														<div class="ed-opts">
-															<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+															<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 															<ul class="ed-options">
-																<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="">Edit Post</a></li>
-																<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="">Unsaved</a></li>
-																<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="">Unbid</a></li>
-																<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="">Close</a></li>
-																<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="">Hide</a></li>
+																<li><a href="#" title="">Edit Post</a></li>
+																<li><a href="#" title="">Unsaved</a></li>
+																<li><a href="#" title="">Unbid</a></li>
+																<li><a href="#" title="">Close</a></li>
+																<li><a href="#" title="">Hide</a></li>
 															</ul>
 														</div>
 													</div>
 													<div class="epi-sec">
 
 														<ul class="bk-links">
-															<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="accept"><i class="la la-bookmark"></i></a></li>
-															<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title=""><i class="la la-envelope"></i></a></li>
+															<li><a href="#" title="accept"><i class="la la-bookmark"></i></a></li>
+															<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
 														</ul>
 													</div>
 													<div class="job_descp">
@@ -200,7 +200,7 @@ $num = mysqli_num_rows($connect);
 													<div class="job-status-bar">
 														<ul class="like-com">
 															<li>
-																<a href="https://gambolthemes.net/workwise-new/company-profile.html#" class="active"><i class="fas fa-heart"></i> Like</a>
+																<a href="#" class="active"><i class="fas fa-heart"></i> Like</a>
 																<img src="./WorkWise Html Template_files/liked-img.png" alt="">
 																<?php
 																if ($num > 0) {
@@ -214,10 +214,10 @@ $num = mysqli_num_rows($connect);
 																?>
 																<span>25</span>
 															</li>
-															<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" class="com"><i class="fas fa-comment-alt"></i> Comments
+															<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comments
 																	15</a></li>
 														</ul>
-														<a href="https://gambolthemes.net/workwise-new/company-profile.html#"><i class="fas fa-eye"></i>Views 50</a>
+														<a href="#"><i class="fas fa-eye"></i>Views 50</a>
 													</div>
 												</div>
 
@@ -232,22 +232,22 @@ $num = mysqli_num_rows($connect);
 										</div>
 										<div class="product-feed-tab" id="info-dd">
 											<div class="user-profile-ov">
-												<h3><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="overview-open">Overview</a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
+												<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor
 													aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue
 													</p>
 											</div>
 											<div class="user-profile-ov st2">
-												<h3><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="esp-bx-open">Establish Since </a><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="esp-bx-open"><i class="fa fa-pencil"></i></a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="esp-bx-open"><i class="fa fa-plus-square"></i></a>
+												<h3><a href="#" title="" class="esp-bx-open">Establish Since </a><a href="#" title="" class="esp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="esp-bx-open"><i class="fa fa-plus-square"></i></a>
 												</h3>
 												<span>February 2004</span>
 											</div>
 											<div class="user-profile-ov">
-												<h3><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="emp-open">Total Employees</a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="emp-open"><i class="fa fa-pencil"></i></a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="emp-open"><i class="fa fa-plus-square"></i></a></h3>
+												<h3><a href="#" title="" class="emp-open">Total Employees</a> <a href="#" title="" class="emp-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="emp-open"><i class="fa fa-plus-square"></i></a></h3>
 												<span>17,048</span>
 											</div>
 											<div class="user-profile-ov">
-												<h3><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="lct-box-open">Location</a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="lct-box-open"><i class="fa fa-plus-square"></i></a>
+												<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="lct-box-open"><i class="fa fa-plus-square"></i></a>
 												</h3>
 												<h4>USA</h4>
 												<p> Menlo Park, California, United States</p>
@@ -274,7 +274,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save">Save</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="experience-box">
@@ -287,7 +287,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save-add">Save &amp; Add More</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="education-box">
@@ -317,7 +317,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save-add">Save &amp; Add More</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="location-box">
@@ -347,16 +347,16 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save">Save</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="skills-box">
 		<div class="overview-edit">
 			<h3>Skills</h3>
 			<ul>
-				<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="skl-name">HTML</a><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-skl"><i class="la la-close"></i></a></li>
-				<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="skl-name">php</a><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-skl"><i class="la la-close"></i></a></li>
-				<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="skl-name">css</a><a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+				<li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+				<li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+				<li><a href="#" title="" class="skl-name">css</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
 			</ul>
 			<form>
 				<input type="text" name="skills" placeholder="Skills">
@@ -364,7 +364,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save-add">Save &amp; Add More</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="create-portfolio">
@@ -382,7 +382,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save">Save</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="establish-box">
@@ -396,7 +396,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save">Save</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	<div class="overview-box" id="total-employes">
@@ -407,7 +407,7 @@ $num = mysqli_num_rows($connect);
 				<button type="submit" class="save">Save</button>
 				<button type="submit" class="cancel">Cancel</button>
 			</form>
-			<a href="https://gambolthemes.net/workwise-new/company-profile.html#" title="" class="close-box"><i class="la la-close"></i></a>
+			<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 		</div>
 	</div>
 	</div>
