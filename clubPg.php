@@ -1,13 +1,9 @@
 <?php include('clubPost_Fetch.php'); ?>
 <?php
-    session_start();
-    $user = "011191156";
-    $con = mysqli_connect("localhost", "root", "", "uiucms");
-    $sql = "SELECT DISTINCT(post_text) FROM post WHERE post_id = '$id'";
-    $result = $con->query($sql);
-
-    $conversation_user = $_REQUEST['conversation_user'];
-    
+$conn = mysqli_connect("localhost", "root", "", "uiucms");
+$query = "select * from post";
+$connect = mysqli_query($conn, $query);
+$num = mysqli_num_rows($connect);
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,7 +87,17 @@
 					<a class="nav-link d-sm-flex align-items-sm-center" href="#">
 						<img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" class="rounded-circle" height="22"
 							alt="Black and White Portrait of a Man" loading="lazy" />
-						<strong class="d-none d-sm-block ms-1">Nola Rifat</strong>
+                            <?php
+						if ($num > 0) {
+							while ($data = mysqli_fetch_assoc($connect)) {
+								echo "
+							<strong> " . $data["user"] . "</strong>
+							";
+							}
+						}
+
+						?>
+						<!--<strong class="d-none d-sm-block ms-1">Nola Rifat</strong>-->
 					</a>
 				</li>
 				
@@ -178,6 +184,14 @@
 														<img src="./image_files/rsz_11rsz_robotics-profile.png"
 															alt="">
 														<div class="usy-name">
+                                                        <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "<strong> " . $data["user"] . "</strong>";
+																	}
+																}
+
+														?>
 															<h3>UIU Robotics</h3>
 															<span><img src="./image_files/clock.png"
 																	alt="">3 min ago</span>
@@ -202,6 +216,14 @@
 													</div>
 												</div>
 												<div class="epi-sec">
+                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "<strong> " . $data["user"] . "</strong>";
+																	}
+																}
+
+												?>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
 														magna sit amet... <a
@@ -215,6 +237,15 @@
 																class="active"><i class="fas fa-heart"></i> Like</a>
 															<img src="./image_files/liked-img.png"
 																alt="">
+                                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "
+																		<span>".$data["total_reaction"]."</span>";
+																	}
+																}
+
+																?>
 															<span>25</span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
@@ -256,7 +287,15 @@
 													</div>
 												</div>
 												<div class="epi-sec">
-													<p> 
+                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "<strong> " . $data["user"] . "</strong>";
+																	}
+																}
+
+												?>
+                                                    <p> 
                                                         <?php echo $post_text ?>
                                                          <a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
@@ -314,6 +353,14 @@
 													</div>
 												</div>
 												<div class="epi-sec">
+                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "<strong> " . $data["user"] . "</strong>";
+																	}
+																}
+
+												?>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
 														magna sit amet... <a
@@ -328,6 +375,15 @@
 																	class="fas fa-heart"></i> Like</a>
 															<img src="./image_files/liked-img.png"
 																alt="">
+                                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "
+																		<span>".$data["total_reaction"]."</span>";
+																	}
+																}
+
+																?>
 															<span>25</span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
@@ -369,6 +425,14 @@
 													</div>
 												</div>
 												<div class="epi-sec">
+                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "<strong> " . $data["user"] . "</strong>";
+																	}
+																}
+
+												?>
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
 														magna sit amet... <a
@@ -383,6 +447,15 @@
 																	class="fas fa-heart"></i> Like</a>
 															<img src="./image_files/liked-img.png"
 																alt="">
+                                                                <?php
+																if ($num > 0) {
+																	while ($data = mysqli_fetch_assoc($connect)) {
+																		echo "
+																		<span>".$data["total_reaction"]."</span>";
+																	}
+																}
+
+																?>
 															<span>25</span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
