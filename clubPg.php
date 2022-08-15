@@ -1,3 +1,4 @@
+<?php include('clubPost_Fetch.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
