@@ -194,7 +194,7 @@ $num = mysqli_num_rows($connect);
 														?>
 															<h3>UIU Robotics</h3>
 															<span><img src="./image_files/clock.png"
-																	alt="">3 min ago</span>
+																	alt="">2:41 am</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -224,9 +224,7 @@ $num = mysqli_num_rows($connect);
 																}
 
 												?>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
-														magna sit amet... <a
+													<p>Innobotics 2020 was a hit! <a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
 															title="">view more</a></p>
 												</div>
@@ -246,7 +244,7 @@ $num = mysqli_num_rows($connect);
 																}
 
 																?>
-															<span>25</span>
+															<span>546</span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
 																class="com"><i class="fas fa-comment-alt"></i> Comments
@@ -265,7 +263,7 @@ $num = mysqli_num_rows($connect);
 														<div class="usy-name">
 															<h3>UIU Robotics</h3>
 															<span><img src="./image_files/clock.png"
-																	alt="">  <?php echo $time ?> min ago</span>
+																	alt="">  <?php echo $time ?> 2:43am</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -297,6 +295,8 @@ $num = mysqli_num_rows($connect);
 												?>
                                                     <p> 
                                                         <?php echo $post_text ?>
+                                                        Congratulations UIU Mars Rover!
+                                                        #mavencrew
                                                          <a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
 															title="">view more</a></p>
@@ -311,6 +311,7 @@ $num = mysqli_num_rows($connect);
 																alt="">
 															<span>
 													            <?php echo $post_raection ?>
+                                                                322
 
                                                             </span>
 														</li>
@@ -331,7 +332,7 @@ $num = mysqli_num_rows($connect);
 														<div class="usy-name">
 															<h3>UIU Robotics</h3>
 															<span><img src="./image_files/clock.png"
-																	alt="">3 min ago</span>
+																	alt="">12:23 am</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -361,9 +362,7 @@ $num = mysqli_num_rows($connect);
 																}
 
 												?>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-														luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
-														magna sit amet... <a
+													<p>Member Recruitment Coming Soon! <a
 															href="https://gambolthemes.net/workwise-new/company-profile.html#"
 															title="">view more</a></p>
 												</div>
@@ -384,7 +383,7 @@ $num = mysqli_num_rows($connect);
 																}
 
 																?>
-															<span>25</span>
+															<span>109</span>
 														</li>
 														<li><a href="https://gambolthemes.net/workwise-new/company-profile.html#"
 																class="com"><i class="fas fa-comment-alt"></i> Comments
@@ -395,7 +394,7 @@ $num = mysqli_num_rows($connect);
 															class="fas fa-eye"></i>Views 50</a>
 												</div>
 											</div>
-											<div class="post-bar">
+											<!--<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="./image_files/rsz_11rsz_robotics-profile.png"
@@ -466,7 +465,7 @@ $num = mysqli_num_rows($connect);
 														href="https://gambolthemes.net/workwise-new/company-profile.html#"><i
 															class="fas fa-eye"></i>Views 50</a>
 												</div>
-											</div>
+											</div>-->
 											<div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
