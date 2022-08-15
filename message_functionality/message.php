@@ -292,7 +292,24 @@
     <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script type="text/javascript">
-        
+        $(document).ready(function(){
+            $("#send").on("click", function(){
+                $.ajax({
+                    url: "insertMessage.php",
+                    method: "POST",
+                    data:{
+                        fromUser: $("#fromUser").val(),
+                        toUser: $("#toUser").val(),
+                        message: $("#message").val()
+                    },
+                    dateType:"text",
+                    success:function(data){
+                        $("#message").val(" ");
+                    }
+                });
+            });
+            
+        });
     </script>
 </body>
 
