@@ -1,4 +1,14 @@
 <?php include('clubPost_Fetch.php'); ?>
+<?php
+    session_start();
+    $user = "011191156";
+    $con = mysqli_connect("localhost", "root", "", "uiucms");
+    $sql = "SELECT DISTINCT(post_text) FROM post WHERE post_id = '$id'";
+    $result = $con->query($sql);
+
+    $conversation_user = $_REQUEST['conversation_user'];
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
