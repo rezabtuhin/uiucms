@@ -262,7 +262,7 @@
                     <div class="company_profile_info">
                         <div class="company-up-info">
                             <img src="images\pf-icon1.png" alt="">
-                            <h3>Nola Rifat</h3>
+                            <h3>Demo User</h3>
                             <h4>Front end developer</h4>
                             <ul>
                                 <li><a href="" title="" class="follow">Add</a></li>
