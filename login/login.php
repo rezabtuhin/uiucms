@@ -259,7 +259,7 @@
                                     <hr>
                                     <p>UiU Club Management System is a platform which represents all the clubs and forums of UIU</p>
                                 </div>
-                                <img src="./login_files/cm-main-img.png" alt="">
+                                <img src="img1.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
