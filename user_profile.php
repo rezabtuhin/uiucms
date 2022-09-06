@@ -13,6 +13,7 @@ $c_p = "";
 $f_b = "";
 $li_in = "";
 $gi_t = "";
+
 $p_w = "";
 while ($rows = mysqli_fetch_array($result)) {
     extract($rows);
