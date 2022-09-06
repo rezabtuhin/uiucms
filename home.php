@@ -12,6 +12,7 @@ while ($rows = mysqli_fetch_array($result)) {
     $pro_pic .= $profile_pic;
     $d_name .= $name;
     $b_io .= $bio;
+
 }
 function time_elapsed_string($datetime, $full = false)
 {
