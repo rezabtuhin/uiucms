@@ -14,7 +14,7 @@
         $d_name.= $name;
         $b_io.= $bio;
         $pa_ss.= $pass;
-    }
+}
 ?>
 
 <!DOCTYPE html>
