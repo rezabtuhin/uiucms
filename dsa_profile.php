@@ -151,7 +151,7 @@ function time_elapsed_string($datetime, $full = false)
                                             </div>
                                             <div class="notification-info">
                                                 <h3><a href="https://gambolthemes.net/workwise-new/messages.html" title="">Jassica William</a> </h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                                 <span>2 min ago</span>
                                             </div>
                                         </div>
