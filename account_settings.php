@@ -12,7 +12,7 @@
         $pro_pic.= $profile_pic;
         $d_name.= $name;
         $b_io.= $bio;
-    }
+}
 ?>
 
 <!DOCTYPE html>
