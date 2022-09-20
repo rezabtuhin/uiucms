@@ -241,6 +241,17 @@ function time_elapsed_string($datetime, $full = false)
 													<b><?php echo $fol_er ?></b>
 												</li>
 											</ul>
+											<div>
+												<ul class="flw-status pt-2">
+													<li>
+														<p><a href="member_rec_list.php">Recruit List</a></p>
+													</li>
+													<li>
+														<p><a href="member_request_form.php">Request Form</a></p>
+													</li>
+												</ul>
+											</div>
+
 										</div>
 										<ul class="social_links">
 											<?php
@@ -320,18 +331,30 @@ function time_elapsed_string($datetime, $full = false)
 														<span>Events List</span>
 													</a>
 												</li>
-												<li data-tab="my-bids">
+												<li data-tab="member-rec">
 													<a href="#" title="" style="color:#b2b2b2;">
-														<i class="fa fa-users mb-2" aria-hidden="true" style="font-size:23px;"></i>
-														<span>Followers</span>
+														<i class="fa fa-calendar mb-2" aria-hidden="true" style="font-size:23px;"></i>
+														<span>Member Recruitment</span>
 													</a>
 												</li>
-												<li data-tab="portfolio-dd">
+												<li data-tab="approve-member">
+													<a href="#" title="" style="color:#b2b2b2;">
+														<i class="fa fa-calendar mb-2" aria-hidden="true" style="font-size:23px;"></i>
+														<span>Approve Members</span>
+													</a>
+												</li>
+												<li data-tab="club-members">
+													<a href="#" title="" style="color:#b2b2b2;">
+														<i class="fa fa-users mb-2" aria-hidden="true" style="font-size:23px;"></i>
+														<span>Members</span>
+													</a>
+												</li>
+												<!-- <li data-tab="portfolio-dd">
 													<a href="#" title="" style="color:#b2b2b2;">
 														<i class="fa fa-user-plus mb-2" aria-hidden="true" style="font-size:23px;"></i>
 														<span>Following</span>
 													</a>
-												</li>
+												</li> -->
 
 
 												<!-- <li data-tab="rewivewdata">
@@ -373,13 +396,37 @@ function time_elapsed_string($datetime, $full = false)
 															<div class="row no-gutters">
 																<div class="col-md-6 col-sm-12">
 																	<div class="cadidatesbtn">
+																		<?php
 
-																		<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#">
-																			<i class="far fa-edit"></i>
-																		</a>
-																		<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#">
-																			<i class="far fa-trash-alt"></i>
-																		</a>
+																		$status = 1;
+																		$con3 = mysqli_connect("localhost", "root", "", "uiucms");
+																		$show = mysqli_query($con3, "SELECT * FROM events");
+																		$data5 = mysqli_fetch_array($show);
+																		$perticipent = $data5['going'];
+																		if (isset($_REQUEST['going'])) {
+
+																			$going = mysqli_query($con3, "update events set going = going + 1 where id='{$data['id']}';");
+
+																			mysqli_query($con, "insert into events_participant (user_id,event_id,status) 
+																			values ('$user','{$data['id']}','$status')")
+																				or die(mysqli_error($con));
+																		}
+																		ini_set('display_errors', 0);
+																		$data6 = mysqli_query($con3, "SELECT * FROM events_participant p JOIN events e ON p.event_id = e.id");
+																		$check1 = mysqli_fetch_array($data6);
+																		if ($check1['status'] == '1') {
+																		?>
+																			<button class="btn btn-warning" disabled>Going</button>
+																			Participent: <?php echo $perticipent ?>
+																		<?php
+																		} else {
+
+																		?>
+																			<form action="" method="post">
+																				<button type="submit" class="btn btn-warning" name="going">Going</button>
+																				Participent: <?php echo $perticipent ?>
+																			</form>
+																		<?php } ?>
 																	</div>
 																</div>
 																<?php if ($_SESSION['role'] == 'dsa') { ?>
@@ -400,6 +447,39 @@ function time_elapsed_string($datetime, $full = false)
 														</div>
 													</div>
 												<?php } ?>
+											</div>
+										</div>
+									</div>
+
+									<div class="product-feed-tab" id="approve-member">
+										<div class="tab-content" id="myTabContent">
+											<div class="tab-pane fade show active" id="mange" role="tabpanel" aria-labelledby="mange-tab">
+												<?php
+												$con = mysqli_connect("localhost", "root", "", "uiucms");
+												$sql66 = mysqli_query($con, "SELECT * FROM members m JOIN membership s ON m.club_id = s.club_id");
+												if (mysqli_num_rows($sql66) > 0) {
+													while ($rows = mysqli_fetch_array($sql66)) {
+												?>
+														<div class="col col-lg-6 my-1">
+															<div class="mt-3 mb-3 d-flex align-items-center">
+
+																<img src="./images/<?php echo $rows['mem_image'] ?>" alt="" width=100 style="border-radius: 20%;" class="mr-3">
+																<a href=""> <strong>
+																		<h3 class="ms-2"><?php echo $rows['full_name'] ?></h3>
+																	</strong></a>
+															</div>
+														</div>
+														<?php if ($_SESSION['role'] == 'club') { ?>
+															<div class="col-md-6 col-sm-12 float-right">
+																<button onclick="updateStatusMem(<?php echo $rows['club_id']; ?>)" id="statusBtn<?php echo $rows['club_id']; ?>" class="status-btn <?php echo $rows['status'] == 0 ? 'approve' : 'disapprove'; ?>"><?php echo $rows['status'] == 0 ? 'Approve' : 'Disapprove'; ?></button>
+															</div>
+														<?php } else { ?>
+															<div class="col-md-6 col-sm-12 float-right"><br><br></div>
+												<?php }
+													}
+												}
+
+												?>
 											</div>
 										</div>
 									</div>
@@ -646,29 +726,24 @@ function time_elapsed_string($datetime, $full = false)
 										</div>
 									</div>
 
-									<div class="product-feed-tab" id="my-bids">
+									<div class="product-feed-tab" id="club-members">
 										<div class="row  bg-white">
 											<?php
-											$sql4 = "SELECT `follower` FROM `followship` WHERE person = '$user'";
-											$result4 = $con->query($sql4);
-											if (mysqli_num_rows($result4) > 0) {
-												while ($rows = mysqli_fetch_array($result4)) {
-													extract($rows);
-													$sql5 = "SELECT `name`,`profile_pic` FROM `users` WHERE id = '$follower'";
-													$result5 = $con->query($sql5);
-													while ($rows2 = mysqli_fetch_array($result5)) {
-														extract($rows2);
+											$con = mysqli_connect("localhost", "root", "", "uiucms");
+											$sql66 = mysqli_query($con, "SELECT * FROM members m JOIN membership s ON m.club_id = s.club_id WHERE m.status='1'");
+											if (mysqli_num_rows($sql66) > 0) {
+												while ($rows = mysqli_fetch_array($sql66)) {
 											?>
-														<div class="col col-lg-6 my-1">
-															<div class="mt-3 mb-3 d-flex align-items-center">
-																<img src="./images/pro_pic/<?php echo $profile_pic ?>" alt="" width=100 style="border-radius: 20%;" class="mr-3">
-																<a href=""> <strong>
-																		<h3 class="ms-2"><?php echo $name ?></h3>
-																	</strong> </a>
-															</div>
+													<div class="col col-lg-6 my-1">
+														<div class="mt-3 mb-3 d-flex align-items-center">
+
+															<img src="./images/<?php echo $rows['mem_image'] ?>" alt="" width=100 style="border-radius: 20%;" class="mr-3">
+															<a href=""> <strong>
+																	<h3 class="ms-2"><?php echo $rows['full_name'] ?></h3>
+																</strong></a>
 														</div>
+													</div>
 											<?php
-													}
 												}
 											}
 
@@ -771,252 +846,65 @@ function time_elapsed_string($datetime, $full = false)
 											</div>
 										</div>
 									</div>
-									<div class="product-feed-tab" id="rewivewdata">
-										<section></section>
-										<div class="posts-section">
-											<div class="post-bar reviewtitle">
-												<h2>Reviews</h2>
-											</div>
-											<div class="post-bar ">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="./profile_files/bg-img3.png" alt="">
-														<div class="usy-name">
-															<h3>Rock William</h3>
-															<div class="epi-sec epi2">
-																<ul class="descp review-lt">
-																	<li><img src="./profile_files/icon8.png" alt=""><span>Epic Coder</span></li>
-																	<li><img src="./profile_files/icon9.png" alt=""><span>India</span></li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="job_descp mngdetl">
-													<div class="star-descp review">
-														<ul>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star-half-o"></i></li>
-														</ul>
-														<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">5.0 of 5 Reviews</a>
-													</div>
-													<div class="reviewtext">
-														<p>Lorem ipsum dolor sit amet, adipiscing elit. Nulla luctus mi
-															et porttitor ultrices</p>
-														<hr>
-													</div>
-													<div class="post_topbar post-reply">
-														<div class="usy-dt">
-															<img src="./profile_files/bg-img4.png" alt="">
-															<div class="usy-name">
-																<h3>John Doe</h3>
-																<div class="epi-sec epi2">
-																	<p><i class="la la-clock-o"></i>3 min ago</p>
-																	<p class="tahnks">Thanks :)</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="post_topbar rep-post rep-thanks">
-														<hr>
-														<div class="usy-dt">
-															<img src="./profile_files/bg-img4.png" alt="">
-															<input class="reply" type="text" placeholder="Reply">
-															<a class="replybtn" href="https://gambolthemes.net/workwise-new/my-profile-feed.html#">Send</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="post-bar post-thanks">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="./profile_files/bg-img1.png" alt="">
-														<div class="usy-name">
-															<h3>Jassica William</h3>
-															<div class="epi-sec epi2">
-																<ul class="descp review-lt">
-																	<li><img src="./profile_files/icon8.png" alt=""><span>Epic Coder</span></li>
-																	<li><img src="./profile_files/icon9.png" alt=""><span>India</span></li>
-																</ul>
-															</div>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Edit Post</a></li>
-															<li><a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Unsaved</a></li>
-															<li><a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Unbid</a></li>
-															<li><a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Close</a></li>
-															<li><a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="job_descp mngdetl">
-													<div class="star-descp review">
-														<ul>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star"></i></li>
-															<li><i class="fa fa-star-half-o"></i></li>
-														</ul>
-														<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">5.0 of 5 Reviews</a><br><br>
-														<p>Awesome Work, Thanks John!</p>
-														<hr>
-													</div>
-													<div class="post_topbar rep-post">
-														<div class="usy-dt">
-															<img src="./profile_files/bg-img4.png" alt="">
-															<input class="reply" type="text" placeholder="Reply">
-															<a class="replybtn" href="https://gambolthemes.net/workwise-new/my-profile-feed.html#">Send</a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="product-feed-tab" id="my-bids">
-										<div class="posts-section">
-
-
-											<div class="process-comm">
-												<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title=""><img src="./profile_files/process-icon.png" alt=""></a>
-											</div>
-										</div>
-									</div>
-									<div class="product-feed-tab" id="portfolio-dd">
-										<div class="row  bg-white">
+									<div class="product-feed-tab" id="member-rec">
+										<div class="user-profile-ov">
+											<h3>logistic request</h3>
 											<?php
-											$sql6 = "SELECT `person` FROM `followship` WHERE follower = '$user'";
-											$result6 = $con->query($sql6);
-											if (mysqli_num_rows($result6) > 0) {
-												while ($rows = mysqli_fetch_array($result6)) {
-													extract($rows);
-													$sql7 = "SELECT `name`,`profile_pic` FROM `users` WHERE id = '$person'";
-													$result7 = $con->query($sql7);
-													while ($rows2 = mysqli_fetch_array($result7)) {
-														extract($rows2);
+											if (isset($_POST['send_mem_req'])) {
+												$filename = $_FILES["recrut_img"]["name"];
+												$tempname = $_FILES["recrut_img"]["tmp_name"];
+												$folder = "images/" . $filename;
+
+												move_uploaded_file($tempname, $folder);
+
+												$club_id = $_POST['club_id'];
+
+												$heading = $_POST['heading'];
+												$payment = $_POST['payment'];
+												$join_date = $_POST['join_date'];
+												$description = $_POST['description'];
+												mysqli_query($con, "insert into membership (heading,club_id,payment,description,recrut_img,join_date)
+											values ('$heading','$club_id','$payment','$description','$filename','$join_date')") or die(mysqli_error($con));
 											?>
-														<div class="col col-lg-6 my-1">
-															<div class="mt-3 mb-3 d-flex align-items-center">
-
-																<img src="./images/pro_pic/<?php echo $profile_pic ?>" alt="" width=100 style="border-radius: 20%;" class="mr-3">
-																<a href=""> <strong>
-																		<h3 class="ms-2"><?php echo $name ?></h3>
-																	</strong></a>
-															</div>
-														</div>
+												<script>
+													window.location.href = "club_profile.php";
+												</script>
 											<?php
-													}
-												}
 											}
-
 											?>
-
-										</div>
-									</div>
-									<div class="product-feed-tab" id="payment-dd">
-										<div class="billing-method">
-											<ul>
-												<li>
-													<h3>Add Billing Method</h3>
-													<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title=""><i class="fa fa-plus-circle"></i></a>
-												</li>
-												<li>
-													<h3>See Activity</h3>
-													<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">View All</a>
-												</li>
-												<li>
-													<h3>Total Money</h3>
-													<span>$0.00</span>
-												</li>
-											</ul>
-											<div class="lt-sec">
-												<img src="./profile_files/lt-icon.png" alt="">
-												<h4>All your transactions are saved here</h4>
-												<a href="https://gambolthemes.net/workwise-new/my-profile-feed.html#" title="">Click Here</a>
-											</div>
-										</div>
-										<div class="add-billing-method">
-											<h3>Add Billing Method</h3>
-											<h4><img src="./profile_files/dlr-icon.png" alt=""><span>With workwise
-													payment protection , only pay for work delivered.</span></h4>
-											<div class="payment_methods">
-												<h4>Credit or Debit Cards</h4>
-												<form>
-													<div class="row">
-														<div class="col-lg-12">
-															<div class="cc-head">
-																<h5>Card Number</h5>
-																<ul>
-																	<li><img src="./profile_files/cc-icon1.png" alt="">
-																	</li>
-																	<li><img src="./profile_files/cc-icon2.png" alt="">
-																	</li>
-																	<li><img src="./profile_files/cc-icon3.png" alt="">
-																	</li>
-																	<li><img src="./profile_files/cc-icon4.png" alt="">
-																	</li>
-																</ul>
-															</div>
-															<div class="inpt-field pd-moree">
-																<input type="text" name="cc-number" placeholder="">
-																<i class="fa fa-credit-card"></i>
-															</div>
+											<div class="acc-setting">
+												<form method="post" enctype="multipart/form-data">
+													<div class="cp-field">
+														<div>
+															<input type="text" name="heading" placeholder="Title">
 														</div>
-														<div class="col-lg-6">
-															<div class="cc-head">
-																<h5>First Name</h5>
-															</div>
-															<div class="inpt-field">
-																<input type="text" name="f-name" placeholder="">
-															</div>
+													</div>
+													<div class="cp-field">
+														<div>
+															<input type="text" name="payment" placeholder="Payment Amount">
 														</div>
-														<div class="col-lg-6">
-															<div class="cc-head">
-																<h5>Last Name</h5>
-															</div>
-															<div class="inpt-field">
-																<input type="text" name="l-name" placeholder="">
-															</div>
+													</div>
+													<div class="cp-field">
+														<div>
+															<input type="date" name="join_date">
 														</div>
-														<div class="col-lg-6">
-															<div class="cc-head">
-																<h5>Expiresons</h5>
-															</div>
-															<div class="rowwy">
-																<div class="row">
-																	<div class="col-lg-6 pd-left-none no-pd">
-																		<div class="inpt-field">
-																			<input type="text" name="f-name" placeholder="">
-																		</div>
-																	</div>
-																	<div class="col-lg-6 pd-right-none no-pd">
-																		<div class="inpt-field">
-																			<input type="text" name="f-name" placeholder="">
-																		</div>
-																	</div>
-																</div>
-															</div>
+													</div>
+													<div class="cp-field">
+														<div>
+															<input type="file" name="recrut_img">
 														</div>
-														<div class="col-lg-6">
-															<div class="cc-head">
-																<h5>Cvv (Security Code) <i class="fa fa-question-circle"></i></h5>
-															</div>
-															<div class="inpt-field">
-																<input type="text" name="l-name" placeholder="">
-															</div>
-														</div>
-														<div class="col-lg-12">
-															<button type="submit">Continue</button>
-														</div>
+													</div>
+													<input type="hidden" name="club_id" value="<?php echo $user; ?>">
+													<div class="cp-field">
+														<h5>Details about member recruit</h5>
+														<textarea name="description"></textarea>
+													</div>
+													<div class="save-stngs pd3">
+														<ul>
+															<li><button type="submit" name="send_mem_req">Send Request</button></li>
+														</ul>
 													</div>
 												</form>
-												<h4>Add Paypal Account</h4>
 											</div>
 										</div>
 									</div>
